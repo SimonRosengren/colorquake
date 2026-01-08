@@ -1,75 +1,34 @@
-# Nuxt Minimal Starter
+# 🌈 ColorQuake
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Transform any color into stunning color schemes instantly. 
 
-## Setup
+Generate beautiful color harmonies - triadic, analogous, complementary, split-complementary, and tetradic palettes from any color input.
 
-Make sure to install dependencies:
+## ✨ Features
+
+- **Multiple Schemes**: 5 color harmony algorithms to choose from
+- **Smart Input**: Accepts hex, rgb, rgba, hsl, and hsla formats
+- **Copy & Paste**: One-click color copying with toast notifications
+- **Dynamic UI**: Background adapts to your selected color
+- **Built with Modern Stack**: Nuxt 4, Vue 3, TypeScript, and Tailwind CSS
+
+## 🚀 Quick Start
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
+# Install dependencies
 yarn install
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
+# Start development server
 yarn dev
 
-# bun
-bun run dev
+# Open http://localhost:3000
 ```
 
-## Production
+## 🎨 How It Works
 
-Build the application for production:
+1. Enter any color (try `#ff6b6b`, `rgb(255, 107, 107)`, or `hsl(0, 100%, 70%)`)
+2. Choose your color scheme
+3. Click "Generate Scheme" 
+4. Copy your favorite colors
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Built with ❤️ using Nuxt 4, Vue 3, and Tailwind CSS.
