@@ -8,8 +8,8 @@ export interface ColorStyle {
 
 export function useColor() {
   const styleObj = reactive<ColorStyle>({
-    'background-color': 'grey',
-    'color': '#ffffff'
+    'background-color': '#151419',
+    'color': '#f8fafa'
   })
   
   const col = ref('#aaa000')

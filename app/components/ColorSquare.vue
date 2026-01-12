@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-24 w-32 rounded-lg cursor-pointer transform transition-all duration-200 hover:scale-105 active:scale-95"
+    class="relative h-24 min-w-32 cursor-pointer transform transition-all duration-200 hover:scale-105 hover:z-10 active:scale-95"
     :style="{ 'background-color': color }"
     @click="copyColor"
   >
@@ -13,9 +13,8 @@
     <!-- Hex code overlay -->
     <div
       v-if="showHex"
-      class="absolute inset-0 flex items-center justify-center rounded-lg"
+      class="absolute inset-0 flex items-center justify-center"
       :style="{
-        'background-color': textColor === 'white' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
         'color': textColor
       }"
     >

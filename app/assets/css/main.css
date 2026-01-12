@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
 @import "tailwindcss";
 
 @source "../../app/components/**/*.vue";
@@ -5,3 +6,20 @@
 @source "../../app/layouts/**/*.vue";
 @source "../../app/plugins/**/*.{js,ts}";
 @source "../../app.vue";
+
+@theme {
+  --font-serif: 'Instrument Serif', system-ui, serif;
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  --color-snow: #FBFBFB;
+  --color-lava: #FE5000;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  
+}
