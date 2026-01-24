@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-24 min-w-32 cursor-pointer transform transition-all duration-200 hover:scale-105 hover:z-10 active:scale-95"
+    class="relative aspect-video md:aspect-[3/4] group rounded-md cursor-pointer transform transition-all duration-200 hover:scale-105 hover:z-10 active:scale-95"
     :style="{ 'background-color': color }"
     @click="copyColor"
   >
@@ -13,26 +13,41 @@
     <!-- Hex code overlay -->
     <div
       v-if="showHex"
-      class="absolute inset-0 flex items-center justify-center"
+      class="absolute inset-0 flex flex-col justify-between p-2"
       :style="{
         'color': textColor
       }"
     >
-      <span class="font-mono text-sm font-semibold select-none">
-        {{ hexCode }}
-      </span>
+      <div class="w-full">
+        <!-- Usage info above divider -->
+        <div v-if="usageLabel || usageDescription" class="mb-2">
+          <div v-if="usageLabel" class="text-5xl font-serif mb-2">{{ usageLabel }}</div>
+          <div v-if="usageDescription" class="text-sm leading-tight">{{ usageDescription }}</div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div 
+          class="h-px w-full mb-1"
+          :style="{
+            'background-color': textColor === 'white' ? '#F1F1F1' : '#171719',
+            'color': textColor === 'white' ? '#F1F1F1' : '#171719'
+          }"
+        />
+        <span class="font-mono text-sm uppercase select-none">
+         {{ hexCode }}
+        </span>
+      </div>
     </div>
     
     <!-- Hover hint -->
-    <div class="absolute top-1 right-1 opacity-0 hover:opacity-100 transition-opacity">
+    <div class="absolute top-1 right-1 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
       <div
         class="w-4 h-4 rounded-full flex items-center justify-center text-xs"
         :style="{
-          'background-color': textColor === 'white' ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)',
-          'color': textColor
+          'color': textColor === 'white' ? '#F1F1F1' : '#171719'
         }"
       >
-        📋
+        <IconsCopy class="w-5 h-5" />
       </div>
     </div>
   </div>
@@ -45,6 +60,8 @@ import { normalizeToHex, getContrastTextColor } from '~/utils/color'
 interface Props {
   color: string
   showHex?: boolean
+  usageLabel?: string
+  usageDescription?: string
 }
 
 interface Emits {

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-12 pb-32 px-6 md:px-0 md:py-0 min-h-screen flex flex-col items-center md:justify-center" :style="styleObj">
+  <div class="pt-12 pb-32 px-6 md:px-12 md:py-0 min-h-screen flex flex-col items-center md:justify-center" :style="styleObj">
     <div class="space-y-4">
       <h1 class="text-7xl md:mb-6 md:text-8xl text-white md:text-center tracking-tight font-serif">Let's get colorful</h1>
       <div class="flex flex-col md:flex-row gap-4 md:gap-2">
@@ -24,25 +24,28 @@
           @click="generateScheme"
         >
           Generate
+          <IconsBrush class="w-4 h-4" />
         </Button>    
 
       </div>
-      <ColorDisplay 
-        v-if="colors.length"
-        class="w-full mt-8"
-        :colors="colors" 
-        :original-color="originalColor" 
-        @copy="handleColorCopy"
-      />
+
     </div>
-    
+       <ColorDisplay 
+        v-if="colors.length"
+        class="w-full mt-8 xl:max-w-2/3"
+        :colors="colors" 
+        :original-color="originalColor"
+        :scheme="selectedScheme"
+        @copy="handleColorCopy"
+      />   
     <!-- Copy feedback toast -->
     <div
       v-if="showCopyToast"
-      class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transform transition-all duration-300"
+      class="fixed top-4 right-4 flex gap-1 items-center bg-snow text-black px-4 py-2 rounded-lg shadow-lg transform transition-all duration-300"
       :class="showCopyToast ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'"
     >
-      Copied {{ copiedColor }} to clipboard!
+      Copied <span class="uppercase">{{ copiedColor }}</span> to clipboard!
+      <IconsCopy class="w-4 h-4" />
     </div>
     
 
