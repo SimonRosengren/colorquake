@@ -1,6 +1,6 @@
 # 🌈 ColorQuake
 
-[Test it here](https://vercel.colorquake.app)
+[Test it here](https://colorquake.vercel.app)
 
 Transform any color into stunning color schemes instantly. 
 
