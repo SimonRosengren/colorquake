@@ -1,5 +1,7 @@
 # 🌈 ColorQuake
 
+[Test it here](https://vercel.colorquake.app)
+
 Transform any color into stunning color schemes instantly. 
 
 Generate beautiful color harmonies - triadic, analogous, complementary, split-complementary, and tetradic palettes from any color input.
