@@ -1,5 +1,6 @@
 <template>
   <div class="pt-12 pb-32 px-6 md:px-12 md:py-0 min-h-screen flex flex-col items-center md:justify-center" :style="styleObj">
+    <Analytics/>
     <div class="space-y-4">
       <h1 class="text-7xl md:mb-6 md:text-8xl text-white md:text-center tracking-tight font-serif">Let's get colorful</h1>
       <div class="flex flex-col md:flex-row gap-4 md:gap-2">
@@ -54,7 +55,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
+import { Analytics } from '@vercel/analytics/nuxt'
 const { styleObj, col, selectedScheme, colors, originalColor, generateScheme } = useColor()
 
 const showCopyToast = ref(false)

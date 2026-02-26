@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/eslint": "1.12.1",
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/analytics": "^1.6.1",
     "eslint": "^9.0.0",
     "nuxt": "^4.2.2",
     "tailwindcss": "^4.1.18",
